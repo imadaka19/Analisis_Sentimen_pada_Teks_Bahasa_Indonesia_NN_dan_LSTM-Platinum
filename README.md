@@ -1,6 +1,10 @@
-# Indonesian Hate Speech Tweet API Cleansing
+# Analisis Sentimen pada Teks Bahasa Indonesia Menggunakan NN dan LSTM
 
-This project is a challenge from Binar Academy aimed at building an API for cleansing Indonesian Hate Speech Tweet data from [Kaggle](https://www.kaggle.com/datasets/ilhamfp31/indonesian-abusive-and-hate-speech-twitter-text/code) and conducting a comprehensive analysis.
+This project is a challenge from Binar Academy aimed at building an API for cleansing also predicting sentiment from text, trained using data from [IndoNLU](https://github.com/IndoNLP/indonlu/tree/master/dataset/smsa_doc-sentiment-prosa) and conducting a comprehensive analysis.
+## Before Instalation, Please download following files:
+Place the downloaded files to model folder
+- file LSTM [model/model.h5](https://drive.google.com/file/d/1SkQ9Wp4l7eekU2LF-VEE312WBb3LUzeQ/view?usp=sharing)
+- file NN [model/model.p](https://drive.google.com/file/d/1qi1BomarBUhisrLOkt8dmG5-4oGJBsLH/view?usp=sharing)
 
 ## Installation
 
@@ -22,28 +26,37 @@ python app.py
 
 Access the API documentation by opening [http://127.0.0.1:5000/docs](http://127.0.0.1:5000/docs) in your browser. The API offers two endpoints:
 
-### 1. clean_teks
+### 1. predict_text
 
-This endpoint requires inputting text and several additional parameters for processing.
-
-```http
-  POST /clean_teks
-```
-
-![image](https://github.com/imadaka19/24001074-18-iak-cleantweet-gold/assets/74599441/8aae3b2b-daa3-4405-99c7-220687837e00)
-
-### 2. text-processing-file
-
-This endpoint requires inputting a CSV file with specified columns for processing.
+This endpoint requires inputting text and choosing model from the dropdown button.
 
 ```http
-  POST /text-processing-file
+  POST /predict_text
 ```
 
-![image](https://github.com/imadaka19/24001074-18-iak-cleantweet-gold/assets/74599441/0cd5becb-d12b-48ba-bae9-dc125f95e8ff)
+![image](https://github.com/imadaka19/F-DSC24001074-18-Kelompok-1-Analasis-Sentimen-dan-Klasifikasi-Platinum/assets/74599441/cbd00d04-fccf-4e92-9033-e6ca7f6e5479)
 
-Those APIs will automatically import data to database as **tweet_table**.
+
+### 2. /text_predict_file
+
+This endpoint requires inputting a CSV or TXT file with just 1 text column and you must choose the model from the dropdown button.
+
+```http
+  POST /text_predict_file
+```
+
+![image](https://github.com/imadaka19/F-DSC24001074-18-Kelompok-1-Analasis-Sentimen-dan-Klasifikasi-Platinum/assets/74599441/c0bd668c-8f00-4132-bc5b-520a9c0c02f9)
+
+
+Those APIs will automatically import data to database as **data_table**.
 
 The database will be saved in your local named **"challenge_database.db"**
 
 Feel free to explore and integrate these APIs for effective cleansing and analysis of Indonesian Hate Speech Tweet data.
+
+## Contributors
+
+Thanks to these amazing contributors:
+
+- [@imadaka19](https://github.com/imadaka19)
+- [@ardhinihendiani](https://github.com/ardhinihendiani)
