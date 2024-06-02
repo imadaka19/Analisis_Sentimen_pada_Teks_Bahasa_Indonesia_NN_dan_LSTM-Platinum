@@ -1,0 +1,32 @@
+tags:
+  - name: Text Prediction File
+
+get:
+  description: File yang akan diprediksi
+
+consumes:
+  - multipart/form-data
+
+parameters:
+  - name: file
+    in: formData
+    description: File to upload
+    required: true
+    type: file
+    
+  - name: model
+    in: query
+    description: Pilih model yang diinginkan
+    required: true
+    type: string
+    enum: [NN, LSTM]
+
+responses:
+    '200':
+      description: Successful response
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error
+
+      
