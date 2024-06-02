@@ -58,5 +58,6 @@ Feel free to explore and integrate these APIs for effective cleansing and analys
 
 Thanks to these amazing contributors:
 
-- [@imadaka19](https://github.com/imadaka19)
-- [@ardhinihendiani](https://github.com/ardhinihendiani)
+- [@imadaka19](https://github.com/imadaka19) 
+- [@ardhinihendiani](https://github.com/ardhinihendiani) 
+- [@tasyaashil](https://github.com/tasyaashil)
