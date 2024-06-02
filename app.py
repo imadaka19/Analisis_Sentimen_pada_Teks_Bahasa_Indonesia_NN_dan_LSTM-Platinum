@@ -109,8 +109,8 @@ def input_teks():
     db.create_text_db(dict)
 
     json_response = {
-        'status_code': 200,
-        'description': "Hasil predict",
+        'Status_code': 200,
+        'Description': "Hasil predict dengan model " + modelnya,
         'Teks' : data,
         'Prediksi': result,
     }
@@ -158,9 +158,9 @@ def text_predict_file():
     db.create_db(df_file[['text','label','text_clean']])
 
     json_response = {
-        'status_code': 200,
-        'description': "Teks yang sudah diproses",
-        'hasil' : df_file[['text','label']].values.tolist(),
+        'Status_code': 200,
+        'Description': "Hasil Prediksi dengan model " + modelnya,
+        'Hasil' : df_file[['text','label']].values.tolist(),
         # 'prediksi': df_file['label'].values.tolist(),
     }
 
