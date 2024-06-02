@@ -52,7 +52,7 @@ Those APIs will automatically import data to database as **data_table**.
 
 The database will be saved in your local named **"challenge_database.db"**
 
-Feel free to explore and integrate these APIs for effective cleansing and analysis of Indonesian Hate Speech Tweet data.
+Feel free to explore and integrate these APIs for effective cleansing and sentiment analysis of Indonesian Text.
 
 ## Contributors
 
